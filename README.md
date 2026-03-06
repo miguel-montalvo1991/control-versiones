@@ -17,4 +17,6 @@ console.log(subtract(5, 2));  // 3
 const { validateEmail } = require('./features/utils/validation');
 console.log(validateEmail('user@email.com')); // true
 console.log(validateEmail(''));               // false
-```
+
+```## Semana 4 - Ramas y Pull Requests
+Práctica de ramas, PR y branch protection con Git y GitHub.
