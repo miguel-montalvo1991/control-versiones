@@ -1,3 +1,5 @@
+
+// Calculadora principal del proyecto control-versiones
 function sum(a, b) {
   return a + b;
 }
