@@ -1,0 +1,24 @@
+{
+  "name": "control-versiones",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Proyecto de práctica para commits atómicos y Conventional Commits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel-montalvo1991/control-versiones.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguel-montalvo1991/control-versiones/issues"
+  },
+  "homepage": "https://github.com/miguel-montalvo1991/control-versiones#readme",
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

@@ -1,6 +1,5 @@
 function validateEmail(email) {
-
-  if (!email || typeof email !== "string") {
+  if (!email || typeof email !== 'string') {
     return false;
   }
 
