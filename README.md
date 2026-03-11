@@ -48,7 +48,7 @@ console.log(subtract(5, 2)); // 3
 import { validateEmail } from './features/utils/validation.js';
 
 console.log(validateEmail('user@email.com')); // true
-console.log(validateEmail(''));               // false
+console.log(validateEmail('')); // false
 ```
 
 ### Manejo de errores
@@ -96,10 +96,10 @@ node --test
 
 ## Semanas trabajadas
 
-| Semana | Tema |
-|--------|------|
-| Semana 4 | Ramas y Pull Requests |
-| Semana 5 | Code Review efectivo |
+| Semana   | Tema                                    |
+| -------- | --------------------------------------- |
+| Semana 4 | Ramas y Pull Requests                   |
+| Semana 5 | Code Review efectivo                    |
 | Semana 6 | Integración Continua con GitHub Actions |
 
 ---
