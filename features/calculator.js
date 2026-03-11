@@ -1,8 +1,8 @@
 // Calculadora principal del proyecto control-versiones
 
 function validateNumbers(a, b) {
-  if (typeof a !== "number" || typeof b !== "number") {
-    throw new Error("Los valores deben ser números");
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('Los valores deben ser números');
   }
 }
 
