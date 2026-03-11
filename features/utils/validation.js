@@ -1,6 +1,12 @@
 function validateEmail(email) {
-  if (!email) return false;
-  return email.includes('@') && email.includes('.');
+
+  if (!email || typeof email !== "string") {
+    return false;
+  }
+
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return regex.test(email.trim());
 }
 
 module.exports = { validateEmail };
