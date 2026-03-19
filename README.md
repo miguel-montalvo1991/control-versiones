@@ -56,7 +56,7 @@ La calculadora exporta dos funciones: `sum` y `subtract`.
 ```js
 import { sum, subtract } from './features/utils/calculator.js';
 
-console.log(sum(5, 3));       // 8
+console.log(sum(5, 3)); // 8
 console.log(subtract(10, 4)); // 6
 ```
 
@@ -85,6 +85,7 @@ node --test tests/suma.test.js
 ```
 
 Las pruebas cubren:
+
 - Suma de numeros positivos
 - Suma de numeros negativos
 - Suma de positivo y negativo
@@ -104,15 +105,15 @@ tipo(alcance): descripcion corta en minusculas
 
 Los tipos disponibles son:
 
-| Tipo | Cuando usarlo |
-|------|---------------|
-| `feat` | Agregas una funcionalidad nueva |
-| `fix` | Corriges un error en el codigo |
-| `docs` | Solo cambias documentacion |
-| `style` | Cambios de formato que no afectan la logica |
+| Tipo       | Cuando usarlo                               |
+| ---------- | ------------------------------------------- |
+| `feat`     | Agregas una funcionalidad nueva             |
+| `fix`      | Corriges un error en el codigo              |
+| `docs`     | Solo cambias documentacion                  |
+| `style`    | Cambios de formato que no afectan la logica |
 | `refactor` | Mejoras al codigo sin cambiar funcionalidad |
-| `test` | Agregas o corriges pruebas |
-| `chore` | Tareas de mantenimiento del proyecto |
+| `test`     | Agregas o corriges pruebas                  |
+| `chore`    | Tareas de mantenimiento del proyecto        |
 
 Ejemplos reales:
 
@@ -153,18 +154,18 @@ Luego abre un Pull Request hacia `develop` en GitHub usando la plantilla que est
 
 ## Scripts disponibles
 
-| Comando | Que hace |
-|---------|----------|
-| `npm test` | Corre todas las pruebas unitarias |
+| Comando          | Que hace                             |
+| ---------------- | ------------------------------------ |
+| `npm test`       | Corre todas las pruebas unitarias    |
 | `npm run format` | Formatea todo el codigo con Prettier |
 
 ---
 
 ## Dependencias
 
-| Paquete | Version | Para que sirve |
-|---------|---------|----------------|
-| prettier | ^3.8.1 | Formatea el codigo automaticamente |
+| Paquete  | Version | Para que sirve                     |
+| -------- | ------- | ---------------------------------- |
+| prettier | ^3.8.1  | Formatea el codigo automaticamente |
 
 ---
 
