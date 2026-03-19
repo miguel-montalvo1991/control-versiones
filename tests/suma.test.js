@@ -28,11 +28,15 @@ test('sum: número positivo y negativo, 10 + -3 debe ser igual a 7', () => {
 });
 
 test('sum: debe lanzar error si el primer valor no es número', () => {
-  assert.throws(() => sum('cinco', 3), { message: 'Los dos valores deben ser números' });
+  assert.throws(() => sum('cinco', 3), {
+    message: 'Los dos valores deben ser números',
+  });
 });
 
 test('sum: debe lanzar error si el segundo valor no es número', () => {
-  assert.throws(() => sum(5, null), { message: 'Los dos valores deben ser números' });
+  assert.throws(() => sum(5, null), {
+    message: 'Los dos valores deben ser números',
+  });
 });
 
 // ─── Pruebas de la función subtract (resta) ──────────────────
@@ -46,5 +50,7 @@ test('subtract: 5 - 10 debe ser igual a -5', () => {
 });
 
 test('subtract: debe lanzar error si algún valor no es número', () => {
-  assert.throws(() => subtract('diez', 2), { message: 'Los dos valores deben ser números' });
+  assert.throws(() => subtract('diez', 2), {
+    message: 'Los dos valores deben ser números',
+  });
 });
