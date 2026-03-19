@@ -1,6 +1,18 @@
+# Dependencias de Node.js (se generan con npm install, no se suben al repo)
+node_modules/
+
+# Variables de entorno (pueden contener contraseñas o tokens)
+.env
+
+# Archivos de caché de Python (si se usa algún script auxiliar)
 __pycache__/
 *.pyc
+
+# Entorno virtual de Python
 .venv/
-node_modules/
+
+# Archivos de log generados automáticamente
 *.log
-.env
+
+# Archivo ZIP generado localmente
+proyecto.zip
