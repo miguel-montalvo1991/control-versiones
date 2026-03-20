@@ -1,9 +1,19 @@
 // suma.test.js
 // Pruebas unitarias de la calculadora
 // Modulo: tests/suma.test.js
+
+// Importamos el modulo nativo de pruebas de Node.js
 import test from 'node:test';
+
+// Importamos las funciones de asercion para verificar resultados
 import assert from 'node:assert/strict';
+
+// Importamos las funciones reales de la calculadora
 import { sum, subtract } from '../features/utils/calculator.js';
+
+// ============================================================
+// Pruebas de la funcion sum
+// ============================================================
 
 test('sum: 2 + 3 debe ser igual a 5', () => {
   assert.equal(sum(2, 3), 5);
@@ -28,6 +38,10 @@ test('sum: error si el segundo valor no es numero', () => {
     message: 'Los dos valores deben ser numeros',
   });
 });
+
+// ============================================================
+// Pruebas de la funcion subtract
+// ============================================================
 
 test('subtract: 10 - 4 debe ser igual a 6', () => {
   assert.equal(subtract(10, 4), 6);
