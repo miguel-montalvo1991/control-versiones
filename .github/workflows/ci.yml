@@ -7,15 +7,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Instalar dependencias
         run: npm install
+
       - name: Lint (Prettier)
         run: ./node_modules/.bin/prettier . --check
-      - name: Tests (Node 20 runner)
-        run: |
-          if [ -d tests ]; then node --test tests/suma.test.js; else echo "No tests"; fi
+
+      - name: Tests
+        run: node --test tests/suma.test.js
