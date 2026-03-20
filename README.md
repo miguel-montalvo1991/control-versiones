@@ -30,12 +30,12 @@ try {
 
 Este proyecto demuestra:
 
-* Uso profesional de Git (ramas, Pull Requests, commits semánticos)
-* Implementación de integración continua con GitHub Actions
-* Escritura de pruebas automatizadas con `node:test`
-* Aplicación de buenas prácticas de Clean Code
-* Organización modular del código
-* Validación de datos y manejo de errores
+- Uso profesional de Git (ramas, Pull Requests, commits semánticos)
+- Implementación de integración continua con GitHub Actions
+- Escritura de pruebas automatizadas con `node:test`
+- Aplicación de buenas prácticas de Clean Code
+- Organización modular del código
+- Validación de datos y manejo de errores
 
 ---
 
@@ -68,7 +68,7 @@ control-versiones/
 
 ### Requisitos
 
-* Node.js 14 o superior
+- Node.js 14 o superior
 
 ### Pasos
 
@@ -84,8 +84,8 @@ npm install
 
 Funciones disponibles:
 
-* `sum(a, b)`
-* `subtract(a, b)`
+- `sum(a, b)`
+- `subtract(a, b)`
 
 ### Ejemplo básico
 
@@ -98,7 +98,7 @@ console.log(sum(10, 20)); // 30
 ### Manejo de errores
 
 ```js
-sum('cinco', 3); 
+sum('cinco', 3);
 // Error: Los dos valores deben ser números
 ```
 
@@ -122,9 +122,9 @@ node --test tests/suma.test.js
 
 ### Cobertura actual
 
-* Suma de números positivos y negativos
-* Operaciones mixtas
-* Validación de errores
+- Suma de números positivos y negativos
+- Operaciones mixtas
+- Validación de errores
 
 ---
 
@@ -189,9 +189,9 @@ git commit -m "docs(readme): mejorar documentacion"
 
 El proyecto incluye un flujo de trabajo con GitHub Actions que:
 
-* Instala dependencias
-* Verifica formato con Prettier
-* Ejecuta pruebas automáticamente
+- Instala dependencias
+- Verifica formato con Prettier
+- Ejecuta pruebas automáticamente
 
 Esto asegura la calidad del código antes de hacer merge.
 
