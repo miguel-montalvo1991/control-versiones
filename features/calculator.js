@@ -14,7 +14,7 @@
  */
 function validarNumeros(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
-    throw new Error('Los dos valores deben ser números');
+    throw new Error('Los dos valores deben ser numeros');
   }
 }
 
