@@ -1,176 +1,223 @@
-# Control de Versiones - Practica ADSO
+# 🧠 Sistema de utilidades con buenas prácticas de ingeniería
 
-## Descripcion
-
-Proyecto de practica del programa **Analisis y Desarrollo de Software (ADSO)** del SENA.
-Cubre commits atomicos, Conventional Commits, ramas, Pull Requests, code review e integracion continua (CI).
+Proyecto que implementa una calculadora modular en Node.js aplicando prácticas profesionales de desarrollo de software como control de versiones, testing automatizado e integración continua.
 
 ---
 
-## Estructura del proyecto
+## 🚀 Demo rápida
+
+```bash
+npm install
+npm test
+```
+
+Ejemplo de uso:
+
+```js
+import { sum, subtract } from './features/utils/calculator.js';
+
+try {
+  const result = sum(5, 3);
+  console.log(`Resultado: ${result}`);
+} catch (error) {
+  console.error(error.message);
+}
+```
+
+---
+
+## 🎯 ¿Qué demuestra este proyecto?
+
+Este proyecto demuestra:
+
+* Uso profesional de Git (ramas, Pull Requests, commits semánticos)
+* Implementación de integración continua con GitHub Actions
+* Escritura de pruebas automatizadas con `node:test`
+* Aplicación de buenas prácticas de Clean Code
+* Organización modular del código
+* Validación de datos y manejo de errores
+
+---
+
+## 📁 Estructura del proyecto
 
 ```
 control-versiones/
 ├── .github/
-│   └── pull_request_template.md   # Plantilla para Pull Requests en GitHub
+│   └── workflows/
+│       └── ci.yml                # Integración continua (GitHub Actions)
+│   └── pull_request_template.md  # Plantilla para Pull Requests
 ├── features/
 │   └── utils/
 │       ├── services/
-│       │   ├── api.js             # Simulacion de llamadas a una API
-│       │   ├── helpers.js         # Funciones de apoyo reutilizables
-│       │   └── validation.js      # Validacion de datos de entrada
-│       └── calculator.js          # Logica principal de la calculadora
+│       │   ├── api.js            # Simulación de llamadas a API
+│       │   ├── helpers.js        # Funciones reutilizables
+│       │   └── validation.js     # Validación de datos
+│       └── calculator.js         # Lógica principal
 ├── tests/
-│   └── suma.test.js               # Pruebas unitarias con node:test
-├── .gitignore                     # Archivos ignorados por Git
-├── .prettierrc.json               # Configuracion del formateador de codigo
-├── package.json                   # Configuracion del proyecto Node.js
-└── README.md                      # Este archivo
+│   └── suma.test.js              # Pruebas unitarias
+├── .gitignore
+├── .prettierrc.json
+├── package.json
+└── README.md
 ```
 
 ---
 
-## Instalacion
+## ⚙️ Instalación
 
-Antes de empezar necesitas tener instalado **Node.js** (version 14 o superior).
+### Requisitos
 
-Clona el repositorio y entra a la carpeta:
+* Node.js 14 o superior
+
+### Pasos
 
 ```bash
 git clone https://github.com/miguel-montalvo1991/control-versiones.git
 cd control-versiones
-```
-
-Instala las dependencias:
-
-```bash
 npm install
 ```
 
 ---
 
-## Uso
+## ▶️ Uso
 
-La calculadora exporta dos funciones: `sum` y `subtract`.
+Funciones disponibles:
+
+* `sum(a, b)`
+* `subtract(a, b)`
+
+### Ejemplo básico
 
 ```js
-import { sum, subtract } from './features/utils/calculator.js';
+import { sum } from './features/utils/calculator.js';
 
-console.log(sum(5, 3)); // 8
-console.log(subtract(10, 4)); // 6
+console.log(sum(10, 20)); // 30
 ```
 
-Si alguno de los valores no es un numero, la funcion lanza un error automaticamente:
+### Manejo de errores
 
 ```js
-sum('cinco', 3); // Error: Los dos valores deben ser números
+sum('cinco', 3); 
+// Error: Los dos valores deben ser números
 ```
 
 ---
 
-## Pruebas
+## 🧪 Pruebas
 
-Las pruebas usan el modulo nativo de Node.js `node:test`, no necesita instalacion extra.
+Este proyecto usa el módulo nativo de Node.js `node:test`.
 
-Para correr todas las pruebas:
+### Ejecutar todas las pruebas
 
 ```bash
 npm test
 ```
 
-O directamente:
+### Ejecutar manualmente
 
 ```bash
 node --test tests/suma.test.js
 ```
 
-Las pruebas cubren:
+### Cobertura actual
 
-- Suma de numeros positivos
-- Suma de numeros negativos
-- Suma de positivo y negativo
-- Resta con resultado positivo
-- Resta con resultado negativo
-- Error al pasar un valor que no es numero
+* Suma de números positivos y negativos
+* Operaciones mixtas
+* Validación de errores
 
 ---
 
-## Convenciones de commits
+## 🔀 Flujo de trabajo
 
-Este proyecto sigue el estandar **Conventional Commits**. Cada commit debe tener este formato:
-
-```
-tipo(alcance): descripcion corta en minusculas
-```
-
-Los tipos disponibles son:
-
-| Tipo       | Cuando usarlo                               |
-| ---------- | ------------------------------------------- |
-| `feat`     | Agregas una funcionalidad nueva             |
-| `fix`      | Corriges un error en el codigo              |
-| `docs`     | Solo cambias documentacion                  |
-| `style`    | Cambios de formato que no afectan la logica |
-| `refactor` | Mejoras al codigo sin cambiar funcionalidad |
-| `test`     | Agregas o corriges pruebas                  |
-| `chore`    | Tareas de mantenimiento del proyecto        |
-
-Ejemplos reales:
-
-```bash
-git commit -m "feat(calculator): agregar funcion de multiplicacion"
-git commit -m "fix(validation): corregir validacion de numeros negativos"
-git commit -m "test(suma): agregar pruebas de casos borde"
-git commit -m "docs(readme): actualizar instrucciones de instalacion"
-```
-
----
-
-## Flujo de trabajo con ramas
+Este proyecto utiliza un flujo basado en ramas:
 
 ```
 main
- └── develop
-      ├── feat/suma
-      ├── feat/resta
-      └── fix/validacion
+ ├── feat/*
+ ├── fix/*
+ └── docs/*
 ```
 
-Crear una rama nueva:
+### Crear una rama
 
 ```bash
-git checkout -b feat/nombre-de-la-funcionalidad
+git checkout -b feat/nueva-funcionalidad
 ```
 
-Subir la rama al repositorio remoto:
+### Subir cambios
 
 ```bash
-git push origin feat/nombre-de-la-funcionalidad
+git push origin feat/nueva-funcionalidad
 ```
 
-Luego abre un Pull Request hacia `develop` en GitHub usando la plantilla que esta en `.github/pull_request_template.md`.
+Luego abrir un Pull Request hacia `main`.
 
 ---
 
-## Scripts disponibles
+## 🧾 Convenciones de commits
 
-| Comando          | Que hace                             |
-| ---------------- | ------------------------------------ |
-| `npm test`       | Corre todas las pruebas unitarias    |
-| `npm run format` | Formatea todo el codigo con Prettier |
+Se utiliza el estándar **Conventional Commits**:
+
+```
+tipo(alcance): descripcion corta
+```
+
+### Tipos comunes
+
+| Tipo     | Uso                        |
+| -------- | -------------------------- |
+| feat     | Nueva funcionalidad        |
+| fix      | Corrección de errores      |
+| docs     | Documentación              |
+| style    | Formato (no afecta lógica) |
+| refactor | Mejora interna del código  |
+| test     | Pruebas                    |
+| chore    | Tareas de mantenimiento    |
+
+### Ejemplos
+
+```bash
+git commit -m "feat(calculator): agregar multiplicacion"
+git commit -m "fix(validation): corregir validacion"
+git commit -m "docs(readme): mejorar documentacion"
+```
 
 ---
 
-## Dependencias
+## ⚙️ Integración continua (CI)
 
-| Paquete  | Version | Para que sirve                     |
-| -------- | ------- | ---------------------------------- |
-| prettier | ^3.8.1  | Formatea el codigo automaticamente |
+El proyecto incluye un flujo de trabajo con GitHub Actions que:
+
+* Instala dependencias
+* Verifica formato con Prettier
+* Ejecuta pruebas automáticamente
+
+Esto asegura la calidad del código antes de hacer merge.
 
 ---
 
-## Autor
+## 📜 Scripts disponibles
 
-Proyecto desarrollado como practica de la ficha ADSO del SENA.
+| Comando        | Descripción                  |
+| -------------- | ---------------------------- |
+| npm test       | Ejecuta pruebas              |
+| npm run format | Formatea código con Prettier |
 
-Repositorio: [github.com/miguel-montalvo1991/control-versiones](https://github.com/miguel-montalvo1991/control-versiones)
+---
+
+## 📦 Dependencias
+
+| Paquete  | Uso                          |
+| -------- | ---------------------------- |
+| prettier | Formato automático de código |
+
+---
+
+## 👨‍💻 Autor
+
+**Miguel Montalvo**
+Tecnólogo en Análisis y Desarrollo de Software - SENA
+
+Repositorio:
+https://github.com/miguel-montalvo1991/control-versiones
