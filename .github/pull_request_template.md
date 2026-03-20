@@ -36,4 +36,4 @@ ok 8 - subtract: debe lanzar error si algún valor no es número
 
 ## Referencias
 
-No cierra ningún issue por ahora.
+closes #4
