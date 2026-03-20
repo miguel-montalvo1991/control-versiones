@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/miguel-montalvo1991/control-versiones#readme",
   "devDependencies": {
-    "prettier": "^3.8.1"
+    "prettier": "^3.2.5"
   }
 }
