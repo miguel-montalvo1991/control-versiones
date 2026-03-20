@@ -15,7 +15,7 @@ jobs:
       - name: Instalar dependencias
         run: npm install
       - name: Lint (Prettier)
-        run: npx prettier . --check || (npx prettier tests/suma.test.js --write && git diff tests/suma.test.js && exit 1)
+        run: ./node_modules/.bin/prettier . --check
       - name: Tests (Node 20 runner)
         run: |
           if [ -d tests ]; then node --test tests/suma.test.js; else echo "No tests"; fi
